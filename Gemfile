@@ -9,9 +9,18 @@ gem 'rails', '3.2.8'
 
 
 group :development, :test do
-	gem 'sqlite3', '1.3.5'
-	gem 'rspec-rails'
-	gem 'capybara'
+	#gem 'sqlite3', '1.3.5'
+	
+	#Use Postgres database
+	gem 'pg'
+	
+	#Rspec
+	gem 'rspec-rails', '~> 2.6'
+	
+	#Guard
+	gem 'guard-rspec'
+	gem 'guard', :git => 'git://github.com/guard/guard.git'
+
 end
 
 # Gems used only for assets and not required
@@ -24,9 +33,15 @@ end
 
 gem 'jquery-rails', '2.0.2'
 
+#Test gems on Mac OS X 
+group :test do
+	gem 'capybara', '1.1.2'
+	gem 'rb-fsevent', '0.9.1', :require => false
+	gem 'growl', '1.0.3'
+end
 
 group :production do
-	gem 'pg', '0.12.2'
+	gem 'pg'
 end
 
 
