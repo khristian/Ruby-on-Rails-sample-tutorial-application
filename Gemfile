@@ -7,6 +7,8 @@ gem 'rails', '3.2.8'
 
 #gem 'sqlite3'
 
+# Added to assist in layout of css
+gem 'bootstrap-sass', '2.0.4'
 
 group :development, :test do
 	#gem 'sqlite3', '1.3.5'
@@ -17,9 +19,13 @@ group :development, :test do
 	#Rspec
 	gem 'rspec-rails', '~> 2.6'
 	
-	#Guard
+	#Guard - Guard is a command line tool to easily handle events on file system modifications
 	gem 'guard-rspec'
 	gem 'guard', :git => 'git://github.com/guard/guard.git'
+
+	#Spork - loads the enviornment once and maintains processess for runnning future tests.
+	gem 'guard-spork', '1.2.0'
+    gem 'spork', '0.9.2'
 
 end
 
