@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
+
   get "static_pages/home"
   get "static_pages/help"
   get "static_pages/about"
@@ -20,6 +22,8 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/contact',   to: 'static_pages#contact'
   match '/tutorial',  to: 'static_pages#tutorial'
+  match '/signup',  to: 'users#new'
+
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
